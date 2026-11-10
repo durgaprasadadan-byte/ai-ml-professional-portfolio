@@ -1,0 +1,113 @@
+[
+ {
+  "id": "enterprise_genai",
+  "name": "Enterprise GenAI for Customer and Account Intelligence",
+  "category": "Generative AI",
+  "type": "Professional experience",
+  "status": "[Edit: verify scope]",
+  "short_description": "RAG-based assistant over customer and account documents. Details are configurable; no confidential information included.",
+  "stack": [
+   "Python",
+   "Amazon Bedrock",
+   "LangChain",
+   "LangGraph",
+   "FastAPI",
+   "Docker",
+   "AWS",
+   "MLflow"
+  ],
+  "case_study": {
+   "overview": "[Edit with approved, non-confidential description.]",
+   "business_problem": "Teams need faster, grounded answers from customer and account documents.",
+   "github": "",
+   "demo": ""
+  }
+ },
+ {
+  "id": "agentic_ai",
+  "name": "Agentic AI Workflow Showcase",
+  "category": "Agentic AI",
+  "type": "Independently implemented",
+  "status": "[Edit: e.g. Prototype]",
+  "short_description": "Tool-calling, orchestration and human-in-the-loop workflow patterns.",
+  "stack": [
+   "LangGraph",
+   "LangChain",
+   "Amazon Bedrock",
+   "MCP",
+   "FastAPI"
+  ],
+  "case_study": {}
+ },
+ {
+  "id": "fraud_detection",
+  "name": "Banking Transaction Fraud Detection",
+  "category": "Machine Learning",
+  "type": "Academic coursework",
+  "status": "Completed (academic)",
+  "short_description": "Random Forest vs Gradient Boosting on 10,000 transactions with 12.5% fraud.",
+  "stack": [
+   "Python",
+   "Scikit-learn",
+   "Pandas",
+   "Plotly"
+  ],
+  "case_study": {
+   "overview": "Academic comparison of tree-based models for fraud detection.",
+   "data_sources": "Academic dataset: 10,000 transactions, 20 features.",
+   "results": "See the Data Science & ML page for documented metrics."
+  }
+ },
+ {
+  "id": "financial_nlp",
+  "name": "Financial NLP",
+  "category": "Natural Language Processing",
+  "type": "Research and learning demonstration",
+  "status": "[Edit]",
+  "short_description": "Placeholder for a financial text NLP project.",
+  "stack": [
+   "Python"
+  ],
+  "case_study": {}
+ },
+ {
+  "id": "healthcare_ml",
+  "name": "Healthcare ML",
+  "category": "Machine Learning",
+  "type": "Research and learning demonstration",
+  "status": "[Edit]",
+  "short_description": "Placeholder. Use synthetic data only.",
+  "stack": [
+   "Python",
+   "Scikit-learn"
+  ],
+  "case_study": {}
+ },
+ {
+  "id": "ecommerce_analytics",
+  "name": "E-commerce Analytics and Customer Segmentation",
+  "category": "Data Science",
+  "type": "Independently implemented",
+  "status": "[Edit]",
+  "short_description": "Placeholder for segmentation and churn analysis on synthetic data.",
+  "stack": [
+   "Pandas",
+   "Scikit-learn",
+   "Plotly"
+  ],
+  "case_study": {}
+ },
+ {
+  "id": "responsible_ai",
+  "name": "Google Shopping Governance Case Study",
+  "category": "Responsible AI",
+  "type": "Academic coursework",
+  "status": "Completed (academic analysis)",
+  "short_description": "Academic governance analysis of ranking and advertising systems.",
+  "stack": [
+   "Governance frameworks",
+   "Risk assessment"
+  ],
+  "case_study": {}
+ }
+]

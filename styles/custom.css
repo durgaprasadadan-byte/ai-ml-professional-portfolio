@@ -1,0 +1,10 @@
+.card{background:#141B30;border:1px solid #26304D;border-radius:12px;padding:1rem 1.2rem;margin-bottom:.8rem}
+.card h4{margin:.2rem 0 .4rem 0}
+.badge{display:inline-block;padding:2px 10px;margin:2px 4px 2px 0;border-radius:999px;font-size:.78rem;background:#1E2748;border:1px solid #3B4A85;color:#B9C2FF}
+.badge.type{background:#2A1F4D;border-color:#6B52C9;color:#D4C8FF}
+.badge.status{background:#14304A;border-color:#2F7DB5;color:#BFE3FF}
+.muted{color:#8E98B8;font-size:.9rem}
+.hero h1{font-size:2.6rem;margin-bottom:0}
+.hero .tag{color:#9AA6FF;font-size:1.05rem}
+.footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #26304D;color:#8E98B8;font-size:.85rem;text-align:center}
+@media(max-width:640px){.hero h1{font-size:1.8rem}}

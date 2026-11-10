@@ -1,0 +1,9 @@
+{
+ "Programming":["Python","SQL","JavaScript"],
+ "Machine Learning":["Scikit-learn","PyTorch","TensorFlow","XGBoost"],
+ "Generative AI":["LLMs","RAG","Prompt Engineering","Embeddings","LangChain","LangGraph"],
+ "Cloud":["AWS","Amazon Bedrock","SageMaker","Azure OpenAI"],
+ "Backend":["FastAPI","REST APIs","Docker","Kubernetes"],
+ "MLOps":["MLflow","GitHub Actions","Model Evaluation","Monitoring"],
+ "Data":["Pandas","NumPy","SQL","Data Engineering"]
+}

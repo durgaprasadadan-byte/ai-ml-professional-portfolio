@@ -1,0 +1,93 @@
+{
+ "RAG architecture": {
+  "label": "Conceptual architecture. Not a claim of implemented or tested components.",
+  "diagram": "flowchart LR\nA[Documents]-->B[Chunking]-->C[Embeddings]-->D[(Vector DB)]\nU[User query]-->E[Retriever]\nD-->E-->F[Prompt builder]-->G[LLM]-->H[Answer + sources]",
+  "components": "Ingestion, chunker, embedder, vector store, retriever, prompt builder, LLM, evaluator.",
+  "data_flow": "Documents are chunked and embedded offline; queries retrieve top-k chunks that ground the LLM prompt.",
+  "responsibilities": "Ingestion prepares data; retriever selects context; LLM generates grounded answers.",
+  "technology": "Python, LangChain, vector database, Amazon Bedrock, FastAPI.",
+  "integration": "Document sources, LLM API, application API.",
+  "security": "Access control on documents, PII handling, secrets in a manager.",
+  "scalability": "Scale ingestion in batches; scale vector store independently.",
+  "failure": "Fallback to 'no answer' when retrieval is weak; retries on LLM errors.",
+  "monitoring": "Latency, retrieval hit-rate, groundedness scores, cost."
+ },
+ "Agentic AI architecture": {
+  "label": "Conceptual architecture. Not a claim of implemented or tested components.",
+  "diagram": "flowchart TD\nU[User]-->P[Planner]-->R{Router}\nR-->T1[Tool: API]\nR-->T2[Tool: Retriever]\nT1-->M[(Memory)]\nT2-->M\nM-->P\nP-->H[Human approval]-->O[Output]",
+  "components": "Planner, router, tools, memory, human approval gate.",
+  "data_flow": "Planner decomposes a task, calls tools, stores state in memory, and requests approval for sensitive actions.",
+  "responsibilities": "Planner decides; tools act; memory keeps state; human gate controls risk.",
+  "technology": "LangGraph, LangChain, Amazon Bedrock, MCP, FastAPI.",
+  "integration": "Tool APIs and MCP servers.",
+  "security": "Least-privilege tool permissions; approval for write actions.",
+  "scalability": "Stateless workers with external state store.",
+  "failure": "Step limits, retries, and graceful tool-failure handling.",
+  "monitoring": "Trace every step; evaluate task success rate."
+ },
+ "ML lifecycle architecture": {
+  "label": "Conceptual architecture. Not a claim of implemented or tested components.",
+  "diagram": "flowchart LR\nA[Data]-->B[Features]-->C[Train]-->D[Validate]-->E[Registry]-->F[Serve]-->G[Monitor]-->A",
+  "components": "Data, feature pipeline, training, validation, registry, serving, monitoring.",
+  "data_flow": "Versioned data feeds training; validated models are registered, served, and monitored for drift.",
+  "responsibilities": "Each stage is isolated and reproducible.",
+  "technology": "Pandas, Scikit-learn, MLflow, GitHub Actions.",
+  "integration": "CI/CD and serving API.",
+  "security": "Data access controls and lineage.",
+  "scalability": "Parallel training jobs.",
+  "failure": "Rollback to previous registered model.",
+  "monitoring": "Drift and performance dashboards."
+ },
+ "Data engineering pipelines": {
+  "label": "Conceptual architecture. Not a claim of implemented or tested components.",
+  "diagram": "flowchart LR\nS[Sources]-->I[Ingest]-->V[Validate]-->T[Transform]-->W[(Warehouse)]-->C[Consumers]",
+  "components": "Sources, ingestion, validation, transformation, storage.",
+  "data_flow": "Raw data is validated, transformed, and published to consumers.",
+  "responsibilities": "Quality gates before storage.",
+  "technology": "Python, SQL, Pandas.",
+  "integration": "Source systems and BI/ML consumers.",
+  "security": "Encryption and masking.",
+  "scalability": "Partitioned batch processing.",
+  "failure": "Dead-letter queues and reruns.",
+  "monitoring": "Row counts, freshness, schema checks."
+ },
+ "API architecture": {
+  "label": "Conceptual architecture. Not a claim of implemented or tested components.",
+  "diagram": "flowchart LR\nC[Client]-->G[API gateway]-->F[FastAPI service]-->M[Model / LLM]\nF-->D[(Store)]",
+  "components": "Gateway, FastAPI service, model layer, store.",
+  "data_flow": "Requests are authenticated, validated, routed to model logic, and logged.",
+  "responsibilities": "Gateway handles auth; service handles logic.",
+  "technology": "FastAPI, Docker.",
+  "integration": "Client apps, model endpoints.",
+  "security": "AuthN/Z, rate limiting, input validation.",
+  "scalability": "Horizontal scaling behind a load balancer.",
+  "failure": "Timeouts, retries, circuit breakers.",
+  "monitoring": "Request metrics and structured logs."
+ },
+ "Cloud deployment architecture": {
+  "label": "Conceptual architecture. Not a claim of implemented or tested components.",
+  "diagram": "flowchart LR\nG[GitHub]-->CI[CI pipeline]-->R[Container registry]-->S[AWS service]-->U[Users]",
+  "components": "Repository, CI, registry, runtime, secrets.",
+  "data_flow": "Merged code builds an image that is deployed to the runtime.",
+  "responsibilities": "CI builds/tests; runtime serves.",
+  "technology": "GitHub Actions, Docker, AWS.",
+  "integration": "Secrets manager, logging.",
+  "security": "IAM least privilege, secrets management.",
+  "scalability": "Autoscaling.",
+  "failure": "Blue/green rollback.",
+  "monitoring": "Cloud logs and alarms."
+ },
+ "Model evaluation pipelines": {
+  "label": "Conceptual architecture. Not a claim of implemented or tested components.",
+  "diagram": "flowchart LR\nD[Eval dataset]-->R[Run model]-->S[Score]-->T[Track in MLflow]-->G{Gate}-->P[Promote]",
+  "components": "Eval set, runner, scorers, tracker, gate.",
+  "data_flow": "Model outputs are scored and compared to thresholds before promotion.",
+  "responsibilities": "Gate blocks regressions.",
+  "technology": "MLflow, Python.",
+  "integration": "CI pipeline.",
+  "security": "Protect eval data.",
+  "scalability": "Run evals in parallel.",
+  "failure": "Fail closed on missing metrics.",
+  "monitoring": "Track metrics over time."
+ }
+}
