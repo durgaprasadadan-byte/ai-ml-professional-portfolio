@@ -5,6 +5,6 @@ from utils.helpers import finish_page, setup_page
 
 setup_page("Experience")
 st.title("Professional Experience")
-st.warning("Entries are editable placeholders. Add only verified, non-confidential details in data/experience.json.", icon="⚠️")
+st.warning("Add only verified, non-confidential details in data/experience.json.", icon="⚠️")
 render_timeline(load("experience"))
 finish_page()

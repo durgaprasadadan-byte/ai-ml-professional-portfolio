@@ -1,7 +1,36 @@
 [
- {"organization":"Amazon","title":"","location":"","period":"","responsibilities":[],"technologies":[],"highlights":[],"outcomes":[]},
- {"organization":"Bank of America","title":"","location":"","period":"","responsibilities":[],"technologies":[],"highlights":[],"outcomes":[]},
- {"organization":"Elevance Health","title":"","location":"","period":"","responsibilities":[],"technologies":[],"highlights":[],"outcomes":[]},
- {"organization":"Zion Infosystem","title":"","location":"","period":"","responsibilities":[],"technologies":[],"highlights":[],"outcomes":[]},
- {"organization":"Revalsys","title":"","location":"","period":"","responsibilities":[],"technologies":[],"highlights":[],"outcomes":[]}
+  {
+    "organization": "Infosys",
+    "title": "Software Developer",
+    "employment_type": "Full-time",
+    "location": "Newark, Delaware (Hybrid)",
+    "engagement": "Client-facing consulting engagement",
+    "period": "Mar 2024 – Nov 2025",
+    "responsibilities": [],
+    "technologies": [],
+    "highlights": [],
+    "outcomes": []
+  },
+  {
+    "organization": "PNC",
+    "title": "Data Engineer",
+    "employment_type": "Contract",
+    "location": "Remote",
+    "period": "Jun 2023 – Feb 2024",
+    "responsibilities": [],
+    "technologies": [],
+    "highlights": [],
+    "outcomes": []
+  },
+  {
+    "organization": "Omnicom Health",
+    "title": "Data Analyst",
+    "employment_type": "Full-time",
+    "location": "Hyderabad",
+    "period": "Oct 2020 – Jul 2021",
+    "responsibilities": [],
+    "technologies": [],
+    "highlights": [],
+    "outcomes": []
+  }
 ]

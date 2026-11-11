@@ -14,7 +14,13 @@ st.subheader("Professional summary"); st.write(p["summary"])
 st.subheader("Technical skills")
 for k, v in skills.items(): st.markdown(f"**{k}** " + badges(v), unsafe_allow_html=True)
 st.subheader("Work experience")
-for e in exp: st.markdown(f"- **{e['organization']}**: {e.get('title') or PLACEHOLDER} ({e.get('period') or PLACEHOLDER})")
+for e in exp:
+    employment = f", {e['employment_type']}" if e.get("employment_type") else ""
+    location = f" — {e['location']}" if e.get("location") else ""
+    st.markdown(
+        f"- **{e['organization']}**: {e.get('title') or PLACEHOLDER}"
+        f"{employment} ({e.get('period') or PLACEHOLDER}){location}"
+    )
 st.subheader("Education")
 for ed in p.get("education", []): st.markdown(f"- {ed['degree']}, {ed['institution']} ({ed['year']})")
 st.subheader("Certifications")

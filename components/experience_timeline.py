@@ -7,9 +7,12 @@ from utils.helpers import badges
 
 def render_timeline(entries: list[dict]) -> None:
     for e in entries:
+        engagement = f"<div>{e['engagement']}</div>" if e.get("engagement") else ""
         st.markdown(
             f'<div class="card"><h4>{e.get("title") or PLACEHOLDER} · {e.get("organization", "")}</h4>'
-            f'<div class="muted">{e.get("location") or PLACEHOLDER} · {e.get("period") or PLACEHOLDER}</div></div>',
+            f'<div class="muted">{e.get("location") or PLACEHOLDER} · '
+            f'{e.get("employment_type") or PLACEHOLDER} · {e.get("period") or PLACEHOLDER}</div>'
+            f'{engagement}</div>',
             unsafe_allow_html=True)
         with st.expander("Details"):
             for label, key in [("Responsibilities", "responsibilities"), ("Project highlights", "highlights"),
